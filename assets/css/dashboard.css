@@ -1,0 +1,265 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+td {
+    font-weight: 300;
+}
+/* navbar */
+ul.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.horizontal li {
+    float: left;
+}
+ul.horizontal li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ul.horizontal-right {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    margin-left: auto;
+    margin-right: 1em;
+    list-style: none;
+    flex: 0 0 auto;
+    height: 100%;
+}
+ul.horizontal-right li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.right-item a {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    height: 100%;
+    display: flex;
+    float: right;
+}
+ul.horizontal li a:hover:not(.active) {
+    background-color: #000;
+}
+ul.horizontal li a.active {
+    background-color:#04AA6D;
+}
+.dropbtn {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #333;
+  color: white;
+  padding: 13.5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+  
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+/* container */
+.navbar {
+    height: 3rem;
+    background-color: #333;
+    align-items: left;
+    display: flex;
+    justify-content: left;
+}
+.container {
+    display: flex;
+
+    /* Misc */
+    border: 1px solid #cbd5e0;
+    height: 100%;
+    width: 100%;
+}
+.resizer[data-direction='horizontal'] {
+    background-color: #cbd5e0;
+    cursor: ew-resize;
+    height: 100%;
+    width: 2px;
+}
+.resizer[data-direction='vertical'] {
+    background-color: #cbd5e0;
+    cursor: ns-resize;
+    height: 2px;
+    width: 100%;
+}
+.container__left {
+    /* Initially, the left takes 1/4 width */
+    width: 20rem;
+    overflow-y: auto
+}
+.container__right {
+    /* Take the remaining width */
+    flex: 1;
+
+    /* Misc */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container__top {
+    /* Initial height */
+    height: 12rem;
+
+    /* Misc */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.container__bottom {
+    /* Take the remaining height */
+    flex: 1;
+
+    /* Misc */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+/* treeview */
+ul {
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 16px;
+}
+ul[role="tree"] {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+  }
+  
+  ul[role="tree"] li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  [role="treeitem"][aria-expanded="false"] + [role="group"] {
+    display: none;
+  }
+  
+  [role="treeitem"][aria-expanded="true"] + [role="group"] {
+    display: block;
+  }
+  
+  [role="treeitem"].doc::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f15c";
+    display: inline-block;
+    padding-right: 2px;
+    padding-left: 2px;
+    vertical-align: middle;
+  }
+  
+  [role="treeitem"][aria-expanded="false"] > ul {
+    display: none;
+  }
+  
+  [role="treeitem"][aria-expanded="true"] > ul {
+    display: block;
+  }
+  
+  [role="treeitem"][aria-expanded="false"] > span::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f07b";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+  }
+  
+  [role="treeitem"][aria-expanded="true"] > span::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f07c";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+  }
+  
+  [role="treeitem"],
+  [role="treeitem"] span {
+    margin: 0;
+    padding: 0.125em;
+    display: block;
+  }
+  
+  /* disable default keyboard focus styling for treeitems
+     Keyboard focus is styled with the following CSS */
+  [role="treeitem"]:focus {
+    outline: 0;
+  }
+  
+  [role="treeitem"][aria-selected="true"] {
+    /* padding-left: 4px; */
+   /* border-left: 5px solid #005a9c; */
+  }
+  
+  [role="treeitem"].focus,
+  [role="treeitem"] span.focus {
+    border-color: black;
+    background-color: #eee;
+  }
+  
+  [role="treeitem"].hover,
+  [role="treeitem"] span:hover {
+    /* padding-left: 4px; */
+    background-color: #ddd;
+    /* border-left: 5px solid #333; */
+  }
+  
